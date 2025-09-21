@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard - Harvest Helper{% endblock %}
+{% block content %}
+
+<!-- THIS IS THE HERO SECTION WITH THE BACKGROUND IMAGE -->
+<section class="relative bg-cover bg-center min-h-[500px] md:min-h-[600px] flex items-center justify-center text-center text-white px-4" 
+         style='background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ url_for('static', filename='images/background.png') }}");'>
+    
+    <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tighter">WELCOME TO ADVANCING CROP PRODUCTION WITH ML IN SMART AGRICULTURE</h1>
+        <p class="mt-4 text-lg md:text-xl text-white/90">Your assistant for smart farming.</p>
+    </div> 
+</section>
+
+<!-- This is the section with the three feature cards -->
+<section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Crop Recommendation Card -->
+            <a class="card-hover-effect block bg-gray-50 rounded-lg p-8 text-center border border-gray-200/60" href="{{ url_for('crop_recommend') }}">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-green-100 rounded-full p-4">
+                        <span class="material-symbols-outlined text-4xl text-green-600">grass</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800">Crop Recommendation</h3>
+                <p class="mt-2 text-gray-600">Get tailored advice on the best crops for your land.</p>
+            </a>
+            <!-- Yield Prediction Card -->
+            <a class="card-hover-effect block bg-gray-50 rounded-lg p-8 text-center border border-gray-200/60" href="{{ url_for('yield_predict') }}">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-green-100 rounded-full p-4">
+                        <span class="material-symbols-outlined text-4xl text-green-600">trending_up</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800">Yield Prediction</h3>
+                <p class="mt-2 text-gray-600">Predict your crop yields with high accuracy using AI.</p>
+            </a>
+            <!-- Fertilizer Recommendation Card -->
+            <a class="card-hover-effect block bg-gray-50 rounded-lg p-8 text-center border border-gray-200/60" href="{{ url_for('fertilizer_recommend') }}">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-green-100 rounded-full p-4">
+                        <span class="material-symbols-outlined text-4xl text-green-600">science</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800">Fertilizer Recommendation</h3>
+                <p class="mt-2 text-gray-600">Optimize fertilizer use for health and sustainability.</p>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
