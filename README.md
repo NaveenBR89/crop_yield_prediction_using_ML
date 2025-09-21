@@ -1,6 +1,6 @@
 # Harvest Helper: An ML-Powered Agricultural Assistant
 
-![Harvest Helper Dashboard](./static/images/image.png)
+![Harvest Helper Dashboard](./static/images/dashboard.png)
 
 Harvest Helper is a comprehensive, ML-powered web application designed to assist farmers, agronomists, and agricultural enthusiasts in making data-driven decisions. By leveraging machine learning, this application provides actionable recommendations for crop selection, yield prediction, and fertilizer usage to optimize farming practices.
 
